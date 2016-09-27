@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+	<h1>Table Data Stuff</h1>
+	<table class="table">
+	<thead>
+		<th>Name</th>
+		<th>Address</th>
+		<th>Category</th>
+	</thead>
+	{% for row in data %}
+		<tr>
+			<td><a href="restaurant/{{row[0]}}">{{row[1]}}</a></td>
+			<td>{{row[2]}}</td>
+			<td>{{row[3]}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+
+</div>
+
+</body>
+</html>

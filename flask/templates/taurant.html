@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+
+<style type="text/css">
+body{
+	margin: 20px;
+}
+.tops{
+	font-size: 20px;
+	margin-top: 30px;
+}
+
+.mids{
+	font-size: 20px;
+
+}
+.review-title{
+	margin-top: 40px;	
+}
+
+</style>
+
+
+</head>
+<body>
+	<div class="container">
+	<h1>{{ data[0][0] }}</h1>
+	<div class="tops cat">Category: {{ data[0][4] }}</div>
+	<div class="tops address">Address: {{ data[0][3] }}</div>
+		{% for row in data %}
+			<div class="mids review-title">{{row[1]}} stars: {{row[6]}}</div>
+			<div class="mids the-review">{{row[2]}}</div>
+			<div class="mids the-reviewer">{{row[5]}}</div>
+		{% endfor %}
+
+		<div><a href="/">Return</a></div>
+	</div>	
+</body>
+</html>
